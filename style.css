@@ -1,0 +1,51 @@
+body {
+    background-color: black;
+    color: white;
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #222;
+    border-radius: 10px;
+    animation: fadeIn 1s;
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+}
+
+h1 {
+    color: #ffcc00;
+    text-align: center;
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+}
+
+p {
+    color: #ccc;
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+}
+
+/* Dark mode styles */
+@media (prefers-color-scheme: dark) {
+    body {
+        background-color: #222;
+        color: white;
+    }
+
+    .container {
+        background-color: black;
+    }
+
+    h1 {
+        color: #ffcc00;
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
