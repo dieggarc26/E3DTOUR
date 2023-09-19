@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<head>
+  <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>E3 Virtual Tour</title>
@@ -56,16 +56,92 @@
                 opacity: 1;
             }
         }
+        body {
+    background-color: black;
+    color: white;
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+}
+
+        .container {
+          text-align: center;
+          margin: 0 auto;
+          max-width: 800px;
+          padding: 20px;
+          background-color: #222;
+          border-radius: 10px;
+          animation: fadeIn 1s;
+          position: relative;
+          z-index: 1; /* Add this line */
+        }
+        
+        .embed-container {
+          max-width: 100%;
+          height: 0;
+          overflow: hidden;
+          padding-bottom: 56.25%;
+          position: relative;
+          z-index: 0; /* Add this line */
+        }
+        
+        spline-viewer {
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          z-index: -1; /* Add this line */
+        }
+        
+        h1 {
+            color: #ffcc00;
+        }
+        
+        p {
+            color: #ccc;
+        }
+        
+        
+        .embed-container svelte-viewer {
+            max-width: 100%;
+        }
+        
+        /* Dark mode styles */
+        @media (prefers-color-scheme: dark) {
+            body {
+                background-color: #222;
+                color: white;
+            }
+        
+            .container {
+                background-color: black;
+            }
+        
+            h1 {
+                color: #ffcc00;
+            }
+        }
+        
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+
     </style>
 </head>
 
-<body>
+  <body>
     <div class="container">
-        <h1>E3 Virtual Tour</h1>
-        <p>Below is a 3D experience</p>
-        <p>By Diego G.</p>
-        <spline-viewer hint loading-anim url="https://prod.spline.design/HtPTU05Kzg3xk6x4/scene.splinecode"></spline-viewer>
+      <h1>E3 Virtual Tour</h1>
+      <p>Below is a 3D experience</p>
+      <p>By Diego G.</p>
     </div>
+
+    <div class="embed-container">
+      <spline-viewer hint loading-anim url="https://prod.spline.design/HtPTU05Kzg3xk6x4/scene.splinecode"></spline-viewer>
 
     <script type="module" src="https://unpkg.com/@splinetool/viewer@0.9.455/build/spline-viewer.js"></script>
 </body>
