@@ -12,23 +12,26 @@ body {
   background-color: #222;
   border-radius: 10px;
   animation: fadeIn 1s;
-  position: relative; /* Add this line */
+  position: relative;
+  z-index: 1; /* Add this line */
 }
 
-embed-container {
-  max-width: 100%; /* Add this line */
-  height: 0; /* Add this line */
-  overflow: hidden; /* Add this line */
-  padding-bottom: 56.25%; /* Add this line for 16:9 aspect ratio */
-  position: relative; /* Add this line */
+.embed-container {
+  max-width: 100%;
+  height: 0;
+  overflow: hidden;
+  padding-bottom: 56.25%;
+  position: relative;
+  z-index: 0; /* Add this line */
 }
 
 spline-viewer {
-  position: absolute; /* Add this line */
-  top: 0; /* Add this line */
-  left: 0; /* Add this line */
-  width: 100%; /* Add this line */
-  height: 100%; /* Add this line */
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1; /* Add this line */
 }
 
 h1 {
