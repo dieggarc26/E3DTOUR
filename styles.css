@@ -2,27 +2,27 @@ body {
     background-color: black;
     color: white;
     font-family: 'Helvetica Neue', Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
 }
 
 .container {
     max-width: 800px;
-    margin: 0 auto;
     padding: 20px;
     background-color: #222;
     border-radius: 10px;
     animation: fadeIn 1s;
-    font-family: 'Helvetica Neue', Arial, sans-serif;
+    text-align: center;
 }
 
 h1 {
     color: #ffcc00;
-    text-align: center;
-    font-family: 'Helvetica Neue', Arial, sans-serif;
 }
 
 p {
     color: #ccc;
-    font-family: 'Helvetica Neue', Arial, sans-serif;
 }
 
 /* Dark mode styles */
