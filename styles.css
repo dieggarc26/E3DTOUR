@@ -2,14 +2,11 @@ body {
     background-color: black;
     color: white;
     font-family: 'Helvetica Neue', Arial, sans-serif;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
 }
 
 .container {
     max-width: 800px;
+    margin: 0 auto;
     padding: 20px;
     background-color: #222;
     border-radius: 10px;
@@ -23,6 +20,15 @@ h1 {
 
 p {
     color: #ccc;
+}
+
+.embed-container {
+    display: flex;
+    justify-content: center;
+}
+
+.embed-container svelte-viewer {
+    max-width: 100%;
 }
 
 /* Dark mode styles */
