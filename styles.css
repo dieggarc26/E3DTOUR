@@ -5,13 +5,30 @@ body {
 }
 
 .container {
-    max-width: 800px;
-    margin: 0 auto;
-    padding: 20px;
-    background-color: #222;
-    border-radius: 10px;
-    animation: fadeIn 1s;
-    text-align: center;
+  text-align: center;
+  margin: 0 auto;
+  max-width: 800px;
+  padding: 20px;
+  background-color: #222;
+  border-radius: 10px;
+  animation: fadeIn 1s;
+  position: relative; /* Add this line */
+}
+
+embed-container {
+  max-width: 100%; /* Add this line */
+  height: 0; /* Add this line */
+  overflow: hidden; /* Add this line */
+  padding-bottom: 56.25%; /* Add this line for 16:9 aspect ratio */
+  position: relative; /* Add this line */
+}
+
+spline-viewer {
+  position: absolute; /* Add this line */
+  top: 0; /* Add this line */
+  left: 0; /* Add this line */
+  width: 100%; /* Add this line */
+  height: 100%; /* Add this line */
 }
 
 h1 {
@@ -22,10 +39,6 @@ p {
     color: #ccc;
 }
 
-.embed-container {
-    display: flex;
-    justify-content: center;
-}
 
 .embed-container svelte-viewer {
     max-width: 100%;
