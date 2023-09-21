@@ -13,15 +13,7 @@
         font-family: 'Helvetica Neue', Arial, sans-serif;
     }
 
-    .container {
-        text-align: center;
-        margin: 0 auto;
-        max-width: 800px;
-        padding: 20px;
-        background-color: #222;
-        border-radius: 10px;
-        animation: fadeIn 1s;
-    }
+
 
     h1 {
         color: #ffcc00;
@@ -63,36 +55,28 @@
         font-family: 'Helvetica Neue', Arial, sans-serif;
     }
 
-    .container {
-        text-align: center;
-        margin: 0 auto;
-        max-width: 800px;
-        padding: 20px;
-        background-color: #222;
-        border-radius: 10px;
-        animation: fadeIn 1s;
-        position: relative;
-        z-index: 1;
-    }
+.embed-container {
+    max-width: 100%;
+    height: 0;
+    overflow: hidden;
+    padding-bottom: 56.25%;
+    position: relative;
+    z-index: 1;
+    margin: 20px auto; /* Center the embed */
+    border-radius: 10px; /* Add border radius */
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.3); /* Add shadow */
+}
 
-    .embed-container {
-        max-width: 100%;
-        height: 0;
-        overflow: hidden;
-        padding-bottom: 56.25%;
-        position: relative;
-        z-index: 1;
-        margin-top: 20px; /* Add this line */
-    }
+spline-viewer {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    border-radius: 10px; /* Add border radius */
+}
 
-    spline-viewer {
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        z-index: -1;
-    }
 
     h1 {
         color: #ffcc00;
