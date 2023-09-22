@@ -17,24 +17,12 @@
       max-width: 600px;
     }
   </style>
-  <script type="module">
-    window.onload = function() {
-      const script = document.createElement('script');
-      script.type = 'module';
-      script.src = 'https://unpkg.com/@splinetool/viewer@0.9.455/build/spline-viewer.js';
-      document.head.appendChild(script);
-      script.onload = function() {
-        const splineViewer = document.createElement('spline-viewer');
-        splineViewer.setAttribute('url', 'undefined');
-        document.body.appendChild(splineViewer);
-      };
-    };
-  </script>
 </head>
 <body>
   <div class="container">
     <h1>Dark Mode Example</h1>
     <p>This is an example of a dark mode HTML page with a centered embed.</p>
+    <script type="module" src="https://unpkg.com/@splinetool/viewer@0.9.455/build/spline-viewer.js"></script>
     <spline-viewer url="undefined"></spline-viewer>
   </div>
 </body>
