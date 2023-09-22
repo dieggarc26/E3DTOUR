@@ -1,164 +1,41 @@
 <!DOCTYPE html>
-<html lang="en">
-
-  <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>E3 Virtual Tour</title>
-    <link rel="stylesheet" href="styles.css">
-<style>
+<html>
+<head>
+  <title>Dark Mode HTML with Centered Embed</title>
+  <style>
     body {
-        background-color: black;
-        color: white;
-        font-family: 'Helvetica Neue', Arial, sans-serif;
+      background-color: #252525;
+      color: #ffffff;
+      font-family: Arial, sans-serif;
+      text-align: center;
     }
-
-
-
-    h1 {
-        color: #ffcc00;
+    
+    .container {
+      background-color: #808080;
+      padding: 20px;
+      margin: 0 auto;
+      max-width: 600px;
     }
-
-    p {
-        color: #ccc;
-    }
-
-    /* Dark mode styles */
-    @media (prefers-color-scheme: dark) {
-        body {
-            background-color: #222;
-            color: white;
-        }
-
-        .container {
-            background-color: black;
-        }
-
-        h1 {
-            color: #ffcc00;
-        }
-    }
-
-    @keyframes fadeIn {
-        from {
-            opacity: 0;
-        }
-
-        to {
-            opacity: 1;
-        }
-    }
-
-    body {
-        background-color: black;
-        color: white;
-        font-family: 'Helvetica Neue', Arial, sans-serif;
-    }
-
-.container {
-    max-width: 75%;
-    margin: 0 auto;
-    background-color: black;
-    border-radius: 10px;
-    padding: 20px;
-    text-align: center;
-}
-#container {
-    width: 100%;
-    height: 100%;
-    position: relative;
-    display: flex;
-    flex-direction: row;
-    flex-wrap: nowrap;
-    align-content: center;
-    justify-content: center;
-    align-items: center;
-    background-color: #2f2f2f;
-    border-radius: 25mm;
-}
-.container h1, .container p {
-  margin: 10px 0; /* Add margin to the heading and paragraphs */
-}
-
-.embed-container {
-    max-width: 100%;
-    height: 0;
-    width: 100%;
-    overflow: hidden;
-    padding-bottom: 40%;
-    position: relative;
-    z-index: 1;
-    right: auto;
-    left: auto;
-    margin: 25mm auto;
-    border-radius: 25mm;
-    box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
-}
-
-
-spline-viewer {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    z-index: -1;
-    border-radius: 10px; /* Add border radius */
-}
-
-
-    h1 {
-        color: #ffcc00;
-    }
-
-    p {
-        color: #ccc;
-    }
-
-    .embed-container svelte-viewer {
-        max-width: 100%;
-    }
-
-    /* Dark mode styles */
-    @media (prefers-color-scheme: dark) {
-        body {
-            background-color: #222;
-            color: white;
-        }
-
-        .container {
-            background-color: black;
-        }
-
-        h1 {
-            color: #ffcc00;
-        }
-    }
-
-    @keyframes fadeIn {
-        from {
-            opacity: 0;
-        }
-
-        to {
-            opacity: 1;
-        }
-    }
-</style>
-
+  </style>
+  <script type="module">
+    window.onload = function() {
+      const script = document.createElement('script');
+      script.type = 'module';
+      script.src = 'https://unpkg.com/@splinetool/viewer@0.9.455/build/spline-viewer.js';
+      document.head.appendChild(script);
+      script.onload = function() {
+        const splineViewer = document.createElement('spline-viewer');
+        splineViewer.setAttribute('url', 'undefined');
+        document.body.appendChild(splineViewer);
+      };
+    };
+  </script>
 </head>
-
-  <body>
-    <div class="container">
-      <h1>E3 Virtual Tour</h1>
-      <p>Below is a 3D experience. 🧱</p>
-      <p>By Diego G.</p>
-    </div>
-
-    <div class="embed-container">
-      <spline-viewer hint loading-anim url="https://prod.spline.design/HtPTU05Kzg3xk6x4/scene.splinecode"></spline-viewer>
-
-    <script type="module" src="https://unpkg.com/@splinetool/viewer@0.9.455/build/spline-viewer.js"></script>
+<body>
+  <div class="container">
+    <h1>Dark Mode Example</h1>
+    <p>This is an example of a dark mode HTML page with a centered embed.</p>
+    <spline-viewer url="undefined"></spline-viewer>
+  </div>
 </body>
-
 </html>
